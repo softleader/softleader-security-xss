@@ -1,6 +1,8 @@
 package tw.com.softleader.security.xss.http;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -50,5 +52,10 @@ public class HttpServletRequestController {
             .orElseThrow(IllegalArgumentException::new);
 
     return new Escape(beforeEscape, request.getParameterValues(PARAM_NAME));
+  }
+
+  @RequestMapping(value = "/form-submit", method = RequestMethod.POST)
+  public Object formSubmit(Escape escaped) throws JsonProcessingException {
+    return escaped;
   }
 }

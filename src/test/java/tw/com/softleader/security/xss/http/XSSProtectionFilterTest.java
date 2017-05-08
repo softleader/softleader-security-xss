@@ -73,4 +73,15 @@ public class XSSProtectionFilterTest extends WebMvcApp {
         .andExpect(MockMvcResultMatchers.jsonPath("$.before[0]").value(input))
         .andExpect(MockMvcResultMatchers.jsonPath("$.after[0]").value(escaped));
   }
+
+  @Test
+  public void testFormSubmit() throws Exception {
+    mockMvc
+        .perform(
+            MockMvcRequestBuilders.post("/http-servlet-request/form-submit").param("before", input))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
+        .andExpect(MockMvcResultMatchers.jsonPath("$.before").value(escaped))
+        .andExpect(MockMvcResultMatchers.jsonPath("$.after").isEmpty());
+  }
 }

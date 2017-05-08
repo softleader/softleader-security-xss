@@ -21,8 +21,4 @@ public class JacksonController {
     return body;
   }
 
-  @RequestMapping(value = "/form-submit", method = RequestMethod.POST)
-  public Object formSubmit(Body body) throws JsonProcessingException {
-    return body;
-  }
 }
