@@ -3,7 +3,7 @@
 
 	<groupId>tw.com.softleader</groupId>
 	<artifactId>softleader-security-xss</artifactId>
-	<version>0.0.1-RELEASE</version>
+	<version>0.0.1.RELEASE</version>
 	<packaging>jar</packaging>
 
 	<name>softleader-security-xss</name>
