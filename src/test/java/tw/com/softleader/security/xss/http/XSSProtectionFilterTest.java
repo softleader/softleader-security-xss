@@ -22,6 +22,19 @@ public class XSSProtectionFilterTest extends WebMvcApp {
   }
 
   @Test
+  public void testRequestParam() throws Exception {
+    mockMvc
+        .perform(
+            MockMvcRequestBuilders.get("/http-servlet-request/request-param")
+                .param(HttpServletRequestController.PARAM_NAME, input)
+                .accept(MediaType.APPLICATION_JSON))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
+        .andExpect(MockMvcResultMatchers.jsonPath("$.before").isEmpty())
+        .andExpect(MockMvcResultMatchers.jsonPath("$.after").value(escaped));
+  }
+
+  @Test
   public void testGetParameter() throws Exception {
     mockMvc
         .perform(
