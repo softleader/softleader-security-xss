@@ -19,8 +19,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import tw.com.softleader.security.xss.filter.CoverityXSSProtectionFilter;
-import tw.com.softleader.security.xss.filter.XSSProtectionFilter;
+import tw.com.softleader.security.xss.http.CoverityXSSProtectionFilter;
+import tw.com.softleader.security.xss.http.XSSProtectionFilter;
 import tw.com.softleader.security.xss.json.jackson.CoverityXSSProtectionModule;
 
 import java.util.List;

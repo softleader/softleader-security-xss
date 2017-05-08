@@ -1,4 +1,4 @@
-package tw.com.softleader.security.xss.filter;
+package tw.com.softleader.security.xss.http;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

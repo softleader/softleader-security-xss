@@ -1,4 +1,4 @@
-package tw.com.softleader.security.xss.filter;
+package tw.com.softleader.security.xss.http;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.util.WebUtils;

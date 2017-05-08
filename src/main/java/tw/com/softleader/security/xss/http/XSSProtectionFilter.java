@@ -1,8 +1,7 @@
-package tw.com.softleader.security.xss.filter;
+package tw.com.softleader.security.xss.http;
 
 import lombok.*;
 import org.springframework.web.filter.OncePerRequestFilter;
-import tw.com.softleader.security.xss.filter.XSSHttpServletRequest;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

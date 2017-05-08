@@ -1,4 +1,4 @@
-package tw.com.softleader.security.xss.filter;
+package tw.com.softleader.security.xss.http;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
