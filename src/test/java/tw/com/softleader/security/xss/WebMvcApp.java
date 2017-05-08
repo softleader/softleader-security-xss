@@ -60,6 +60,9 @@ public class WebMvcApp extends WebMvcConfigurerAdapter {
 
   @Bean
   public ObjectMapper mapper() {
-    return Jackson2ObjectMapperBuilder.json().modules(new CoverityXSSProtectionModule()).build();
+    // return Jackson2ObjectMapperBuilder.json().modules(new CoverityXSSProtectionModule()).build();
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.registerModule(new CoverityXSSProtectionModule());
+    return mapper;
   }
 }

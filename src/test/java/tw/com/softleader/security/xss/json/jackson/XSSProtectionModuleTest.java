@@ -10,7 +10,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import tw.com.softleader.security.xss.WebMvcApp;
 
 /** @author Matt S.Y Ho */
-public class XSSProtectionModuleApp extends WebMvcApp {
+public class XSSProtectionModuleTest extends WebMvcApp {
 
   private String content;
 
