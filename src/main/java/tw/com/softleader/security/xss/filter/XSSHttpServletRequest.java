@@ -34,8 +34,6 @@ public class XSSHttpServletRequest extends HttpServletRequestWrapper {
    * @return the matching request object, or {@code Optional.empty()} if none of that type is
    *     available
    * @see javax.servlet.http.HttpServletRequest
-   * @see javax.portlet.ActionRequest
-   * @see javax.portlet.RenderRequest
    */
   public <T> Optional<T> getNativeRequest(Class<T> requiredType) {
     return Optional.ofNullable(WebUtils.getNativeRequest(getRequest(), requiredType));

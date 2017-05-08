@@ -7,10 +7,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import tw.com.softleader.security.xss.WebMvcTest;
+import tw.com.softleader.security.xss.WebMvcApp;
 
 /** @author Matt S.Y Ho */
-public class XSSProtectionModuleTest extends WebMvcTest {
+public class XSSProtectionModuleApp extends WebMvcApp {
 
   private String content;
 

@@ -27,12 +27,12 @@ import java.util.List;
 
 /** @author Matt S.Y Ho */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = WebMvcTest.class)
+@ContextConfiguration(classes = WebMvcApp.class)
 @EnableAutoConfiguration
 @ComponentScan(basePackages = "tw.com.softleader")
 @WebAppConfiguration
 @Configuration
-public class WebMvcTest extends WebMvcConfigurerAdapter {
+public class WebMvcApp extends WebMvcConfigurerAdapter {
 
   @Autowired WebApplicationContext wac;
 

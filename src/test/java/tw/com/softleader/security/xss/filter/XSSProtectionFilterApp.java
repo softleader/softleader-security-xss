@@ -1,15 +1,14 @@
 package tw.com.softleader.security.xss.filter;
 
 import com.coverity.security.Escape;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import tw.com.softleader.security.xss.WebMvcTest;
+import tw.com.softleader.security.xss.WebMvcApp;
 
 /** @author Matt S.Y Ho */
-public class XSSProtectionFilterTest extends WebMvcTest {
+public class XSSProtectionFilterApp extends WebMvcApp {
 
   private String input;
 
