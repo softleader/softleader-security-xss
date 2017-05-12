@@ -15,7 +15,7 @@ import java.util.function.Function;
 @AllArgsConstructor
 public class XSSProtectionFilter extends OncePerRequestFilter {
 
-  @NonNull private final Function<String, String> escaper;
+  @NonNull protected final Function<String, String> escaper;
 
   @Override
   protected void doFilterInternal(
