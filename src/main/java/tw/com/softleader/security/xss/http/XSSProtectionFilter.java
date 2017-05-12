@@ -1,6 +1,7 @@
 package tw.com.softleader.security.xss.http;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NonNull;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -11,11 +12,10 @@ import java.io.IOException;
 import java.util.function.Function;
 
 /** @author Matt S.Y Ho */
-@NoArgsConstructor
 @AllArgsConstructor
 public class XSSProtectionFilter extends OncePerRequestFilter {
 
-  @Setter @NonNull private Function<String, String> escaper = Function.identity();
+  @NonNull private final Function<String, String> escaper;
 
   @Override
   protected void doFilterInternal(
