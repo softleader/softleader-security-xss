@@ -12,7 +12,7 @@ import java.util.function.Function;
 
 /** @author Matt S.Y Ho */
 @NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class XSSProtectionFilter extends OncePerRequestFilter {
 
   @Setter @NonNull private Function<String, String> escaper = Function.identity();
