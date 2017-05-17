@@ -24,13 +24,11 @@
 
 	<repositories>
 		<repository>
-			<id>release</id>
-			<name>SoftLeader Framework</name>
+			<id>softleader-releases</id>
 			<url>http://softleader.com.tw:8082/nexus/content/repositories/releases</url>
 		</repository>
 		<repository>
-			<id>snapshot</id>
-			<name>SoftLeader Framework</name>
+			<id>softleader-snapshots</id>
 			<url>http://softleader.com.tw:8082/nexus/content/repositories/snapshots</url>
 		</repository>
 	</repositories>
