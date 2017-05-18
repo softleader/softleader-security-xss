@@ -19,13 +19,15 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import tw.com.softleader.security.xss.http.CoverityXSSProtectionFilter;
+import tw.com.softleader.security.xss.http.HtmlXSSProtectionFilter;
 import tw.com.softleader.security.xss.http.XSSProtectionFilter;
-import tw.com.softleader.security.xss.json.jackson.CoverityXSSProtectionModule;
+import tw.com.softleader.security.xss.json.jackson.HtmlXSSProtectionModule;
 
 import java.util.List;
 
-/** @author Matt S.Y Ho */
+/**
+ * @author Matt S.Y Ho
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = WebMvcApp.class)
 @EnableAutoConfiguration
@@ -34,22 +36,23 @@ import java.util.List;
 @Configuration
 public class WebMvcApp extends WebMvcConfigurerAdapter {
 
-  @Autowired WebApplicationContext wac;
+  @Autowired
+  WebApplicationContext wac;
 
   protected MockMvc mockMvc;
 
   @Before
   public void setUp() throws Exception {
     mockMvc =
-        MockMvcBuilders.webAppContextSetup(wac)
-            .alwaysDo(MockMvcResultHandlers.print())
-            .addFilters(filter())
-            .build();
+            MockMvcBuilders.webAppContextSetup(wac)
+                    .alwaysDo(MockMvcResultHandlers.print())
+                    .addFilters(filter())
+                    .build();
   }
 
   @Bean
   public XSSProtectionFilter filter() {
-    return new CoverityXSSProtectionFilter();
+    return new HtmlXSSProtectionFilter();
   }
 
   @Override
@@ -61,6 +64,6 @@ public class WebMvcApp extends WebMvcConfigurerAdapter {
   @Bean
   public ObjectMapper mapper() {
     return Jackson2ObjectMapperBuilder.json()
-        .modules(new CoverityXSSProtectionModule()).build();
+            .modules(new HtmlXSSProtectionModule()).build();
   }
 }
