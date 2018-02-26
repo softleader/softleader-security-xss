@@ -2,6 +2,7 @@ package tw.com.softleader.security.xss;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -34,6 +35,7 @@ import java.util.List;
 @ComponentScan(basePackages = "tw.com.softleader")
 @WebAppConfiguration
 @Configuration
+@Ignore
 public class WebMvcApp extends WebMvcConfigurerAdapter {
 
   @Autowired
