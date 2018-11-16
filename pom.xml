@@ -25,11 +25,11 @@
 	<repositories>
 		<repository>
 			<id>softleader-releases</id>
-			<url>http://svn.softleader.com.tw:8084/repository/maven-releases/</url>
+			<url>${softleader.releases.repository}</url>
 		</repository>
 		<repository>
 			<id>softleader-snapshots</id>
-			<url>http://svn.softleader.com.tw:8084/repository/maven-snapshots/</url>
+			<url>${softleader.snapshots.repository}</url>
 		</repository>
 	</repositories>
 
@@ -40,6 +40,8 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<org.jacoco.version>0.7.9</org.jacoco.version>
+		<softleader.releases.repository>http://svn.softleader.com.tw:8084/repository/maven-releases/</softleader.releases.repository>
+		<softleader.snapshots.repository>http://svn.softleader.com.tw:8084/repository/maven-snapshots/</softleader.snapshots.repository>
 	</properties>
 
 	<build>
