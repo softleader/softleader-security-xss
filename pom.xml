@@ -33,17 +33,6 @@
 		<softleader.snapshots.repository>http://svn.softleader.com.tw:8084/repository/maven-snapshots/</softleader.snapshots.repository>
 	</properties>
 	
-	<repositories>
-		<repository>
-			<id>softleader-releases</id>
-			<url>${softleader.releases.repository}</url>
-		</repository>
-		<repository>
-			<id>softleader-snapshots</id>
-			<url>${softleader.snapshots.repository}</url>
-		</repository>
-	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
