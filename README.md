@@ -3,4 +3,4 @@ A lightweight set of escaping routines for cross-site scripting (XSS) in SoftLea
 
 ## Essentials
 
-[See Wiki](https://github.com/softleader/softleader-wiki/wiki/XSSProtection)
+[See Wiki](https://github.com/softleader/softleader-security-xss/wiki)
