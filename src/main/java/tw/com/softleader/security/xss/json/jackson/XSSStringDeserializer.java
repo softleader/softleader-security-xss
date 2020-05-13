@@ -28,7 +28,7 @@ public class XSSStringDeserializer extends StdScalarDeserializer<String> {
   public String deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
     String before = delegate.deserialize(p, ctxt);
     String escaped = Optional.ofNullable(before).map(escaper::apply).orElse(before);
-    log.debug("Escaped field '{}' from [{}] to [{}]", p.getCurrentName(), before, escaped);
+    log.debug("escaped field '{}' from [{}] to [{}]", p.getCurrentName(), before, escaped);
     return escaped;
   }
 
