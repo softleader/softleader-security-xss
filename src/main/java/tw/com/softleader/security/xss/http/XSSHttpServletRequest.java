@@ -43,7 +43,7 @@ public class XSSHttpServletRequest extends HttpServletRequestWrapper {
   public String getParameter(String name) {
     String before = super.getParameter(name);
     String escaped = Optional.ofNullable(before).map(escaper::apply).orElse(null);
-    log.debug("Escaped request parameter '{}' from [{}] to [{}]", name, before, escaped);
+    log.debug("escaped request parameter '{}' from [{}] to [{}]", name, before, escaped);
     return escaped;
   }
 
@@ -64,7 +64,7 @@ public class XSSHttpServletRequest extends HttpServletRequestWrapper {
                                     .map(escaper::apply)
                                     .toArray(String[]::new))))
             .orElse(null);
-    log.debug("Escaped request parameter map from {} to {}", before, escaped);
+    log.debug("escaped request parameter map from {} to {}", before, escaped);
     return escaped;
   }
 
@@ -76,7 +76,7 @@ public class XSSHttpServletRequest extends HttpServletRequestWrapper {
             .map(values -> Stream.of(values).map(escaper::apply).toArray(String[]::new))
             .orElse(null);
     log.debug(
-        "Escaped request parameter values '{}' from {} to {}",
+        "escaped request parameter values '{}' from [{}] to [{}]",
         name,
         Arrays.toString(before),
         Arrays.toString(escaped));
